@@ -5,15 +5,11 @@
 <title>A cat photo app</title>
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
+	#cat-photo-form {
+		background-color: green;
+	}
 	.red-text {
 		color: red;
-	}
-	p {
-		font-size: 16px;
-		font-family: Monospace;
-	}
-	h2 {
-		font-family: Lobster;
 	}
 	.smaller-image {
 		width: 300px;
@@ -23,6 +19,16 @@
 		border-width: 10px;
 		border-style: solid;
 		border-radius: 50%;
+	}
+	.silver-background {
+		background-color: silver;
+	}
+	p {
+		font-size: 16px;
+		font-family: Monospace;
+	}
+	h2 {
+		font-family: Lobster;
 	}
 </style>
 
@@ -37,6 +43,7 @@
 	<a href="http://icanhas.cheezburger.com/lolcats">lolcats</a>
 	<br />
 	
+	<div class="silver-background">
 	<p>Things Kitties Love</p>
 	<ul>
 		<li>My kitties love to sleep</li>
@@ -49,11 +56,23 @@
 		<li>Dogs</li>
 		<li>Not getting table scraps</li>
 	</ol>
+	</div>
 	
-	<form action="/submit-cat-photo">
+	<br />
+	<form id="cat-photo-form" action="/submit-cat-photo">
 		<button type="submit">Submit!</button>
 		<input type="text" required placeholder="cat photo URL" />
 	</form>
+	
+	<br />
+	<label><input type="radio" name="indoor-outdoor" checked />Indoor</label>
+	<label><input type="radio" name="indoor-outdoor" />Outdoor</label>	
+	
+	
+	<br />
+	<label><input type="checkbox" name="personality" checked />Grass-is-always-greener kitty</label>
+	<label><input type="checkbox" name="personality" />I'm-too-cute-to-be-bad kitty</label>
+	<label><input type="checkbox" name="personality" />Queen-size-sleeper kitty</label>
 </body>
 </html>
 
