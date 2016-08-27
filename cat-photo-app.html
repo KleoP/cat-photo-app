@@ -3,29 +3,27 @@
 <html lang="en">
 <head>
 <title>A cat photo app</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
 	#cat-photo-form {
-		background-color: green;
-	}
-	.red-text {
-		color: red;
-	}
-	.smaller-image {
-		width: 300px;
+		background-color: #00FF00;
 	}
 	.thick-green-border {
-		border-color: green;
+		border-color: #00FF00;
 		border-width: 10px;
 		border-style: solid;
 		border-radius: 50%;
 	}
-	.silver-background {
-		background-color: silver;
+	.thick-black-border {
+		border-color: #000000;
+		border-width: 20px;
+		border-style: solid;
 	}
-	p {
-		font-size: 16px;
-		font-family: Monospace;
+	body {
+		background-color: #D3D3D3;
 	}
 	h2 {
 		font-family: Lobster;
@@ -35,44 +33,84 @@
 </head>
 
 <body>
-	<h2 class="red-text">View more <a href=#><img src="../images/memphis_001.jpg" alt="image of orange cat with one paw outstretched" class="smaller-image" /></a> cat photos on the web!</h2>
+<div class="container-fluid">
+	
+	<div class="row">
+		<div class="col-md-4">
+			<h2 class="text-primary text-center">View more cat photos on the web!</h2>
+		</div>
+		<div class="col-md-8">
+			<a href=#><img src="../images/memphis_001.jpg" alt="image of orange cat with one paw outstretched" class="image-responsive" /></a>
+		</div>
+	</div>
+	
+	<br />
+	<div class="row">
+		<div class="col-xs-4"><button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"> Like</i></button></i></div>
+		<div class="col-xs-4"><button class="btn btn-block btn-info"><i class="fa fa-circle"> Info</i></button></div>
+		<div class="col-xs-4"><button class="btn btn-block btn-danger"><i class="fa fa-trash"> Delete</i></button></div>
+	</div>
+	
+	<br />
+	<img src="../images/bffs_001.jpg" class="image-responsive thick-black-border center-block" alt="two cats sitting on the sofa" />
+	
+	<br />
+	<div class="ro<w">
+		<div class="col-xs-4"><button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"> Like!</i></button></div>
+		<div class="col-xs-4"><button class="btn btn-block btn-info"><i class="fa fa-circle"> Info</i></button></div>
+		<div class="col-xs-4"><button class="btn btn-block btn-danger"><i class="fa fa-trash"> Delete</i></button></div>
+	</div>
+	
+	<br /><br />
 	<p>The cat and the computer, they don't really go together. My cat sheds on my computer. She sleeps on my computer. She uses my iPad as a pillow, and my Android phone as one. She probably likes the heat from the electronics.</p>
 	<p>But, when IBM sent an Artificial Intelligence (AI) to probe the web, to learn its own mind, to interact with human-created content, what the AI learned was how to identify a cat.</p>	
-	<img src="../images/dinah_001.jpg" alt="A calico cat yawning" class="smaller-image thick-green-border" />
+	<img src="../images/dinah_001.jpg" class="image-responsive thick-black-border center-block" alt="A calico cat yawning" class="image-responsive thick-green-border" />
+		
+	<br />
+	<div class="ro<w">
+		<div class="col-xs-4"><button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"> Like!</i></button></div>
+		<div class="col-xs-4"><button class="btn btn-block btn-info"><i class="fa fa-circle"> Info</i></button></div>
+		<div class="col-xs-4"><button class="btn btn-block btn-danger"><i class="fa fa-trash"> Delete</i></button></div>
+	</div>
+	
 	<br />
 	<a href="http://icanhas.cheezburger.com/lolcats">lolcats</a>
-	<br />
 	
+	<br /><br />
 	<div class="silver-background">
-	<p>Things Kitties Love</p>
-	<ul>
-		<li>My kitties love to sleep</li>
-		<li>My kitties love to eat</li>
-		<li>My kitties love to play and purr</li>
-	</ul>
-	<p>Things Tooties Hate</p>
-	<ol>
-		<li>Moving</li>
-		<li>Dogs</li>
-		<li>Not getting table scraps</li>
-	</ol>
+		<p>Things Kitties <span class="text-danger">Love</span></p>
+		<ul>
+			<li>My kitties love to sleep</li>
+			<li>My kitties love to eat</li>
+			<li>My kitties love to play and purr</li>
+		</ul>
+		<p>Things Tooties <span style="color: #000000">Hate</span></p>
+		<ol>
+			<li>Moving</li>
+			<li>Dogs</li>
+			<li>Not getting table scraps</li>
+		</ol>
 	</div>
 	
 	<br />
 	<form id="cat-photo-form" action="/submit-cat-photo">
-		<button type="submit">Submit!</button>
-		<input type="text" required placeholder="cat photo URL" />
+		<button type="btn btn-primary submit"><i class="fa fa-paper-plane"> Submit!</i></button>
+		<input type="form-control text" required placeholder="cat photo URL" />
 	</form>
 	
 	<br />
-	<label><input type="radio" name="indoor-outdoor" checked />Indoor</label>
-	<label><input type="radio" name="indoor-outdoor" />Outdoor</label>	
-	
+	<div class="row">
+		<div class="col-md-6"><label><input type="radio" name="indoor-outdoor" checked />Indoor</label></div>
+		<div class="col-md-6"><label><input type="radio" name="indoor-outdoor" />Outdoor</label></div>
+	</div>
 	
 	<br />
-	<label><input type="checkbox" name="personality" checked />Grass-is-always-greener kitty</label>
-	<label><input type="checkbox" name="personality" />I'm-too-cute-to-be-bad kitty</label>
-	<label><input type="checkbox" name="personality" />Queen-size-sleeper kitty</label>
+	<div class="row">
+		<div class="col-md-4"><label><input type="checkbox" name="personality" checked />Grass-is-always-greener kitty</label></div>
+		<div class="col-md-4"><label><input type="checkbox" name="personality" />I'm-too-cute-to-be-bad kitty</label></div>
+		<div class="col-md-4"><label><input type="checkbox" name="personality" />Queen-size-sleeper kitty</label></div>
+	</div>
+</div>
 </body>
 </html>
 
